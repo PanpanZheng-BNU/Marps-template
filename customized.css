@@ -1,0 +1,148 @@
+/* @theme customized */
+
+@import 'default';
+
+:root {
+  --font-color: #2e3440;
+  --back-ground-color: #eceff4;
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: var(--font-color);
+}
+
+section.slide_title,
+section.section_title {
+  place-content: safe center center;
+}
+
+section {
+  place-content: safe start center;
+  background-color: var(--back-ground-color);
+  /* background-color: red; */
+  padding: 1.5rem 1.5rem;
+}
+
+section.slide_title>div {
+  display: grid;
+  place-items: self-end normal;
+  grid-template-rows: 60% 20%;
+  width: 80%;
+  height: 90%;
+  /* padding: 12% 0; */
+  margin: 10% 10%;
+  /* background: red; */
+}
+
+section.slide_title h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-align: center;
+  border-bottom: none;
+}
+
+
+
+
+
+section.slide_title p {
+  text-align: end;
+  font-weight: 450;
+}
+
+section.section_title h1 {
+  text-align: start;
+  font-size: 2.0rem;
+  font-weight: 600;
+  border-bottom: .09rem solid var(--h1-color);
+  padding: 0 0;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 550;
+  border-bottom: .08rem solid var(--h1-color);
+  padding: 0 0;
+}
+
+
+
+
+/* multi-columns */
+section.columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1rem;
+}
+
+section.columns>h1 {
+  grid-column: 1 / -1
+}
+
+section.columns>pre {
+  /* font-size: 1.5rem; */
+  /* align-items: center; */
+  align-self: center;
+}
+
+/* multi-columns2 */
+section footer {
+  /* font-size: 2rem; */
+  max-width: 95%;
+  font-family: "Times New Roman"
+}
+
+
+
+
+/* triple line table */
+table {
+  /* border-spacing: 0; */
+  /* border-collapse: collapse; */
+
+  th,
+  td {
+    /* border: 1px; */
+    /* background: var(--back-ground-color); */
+    padding: .2rem 1rem;
+    border: none;
+  }
+
+  th {
+    background-color: #e5e9f0;
+  }
+
+  tr {
+    background: var(--back-ground-color);
+    border: none;
+  }
+}
+
+tbody tr:nth-child(2n + 1) {
+  background-color: var(--back-ground-color);
+  /* Color for the first row of each pair */
+}
+
+tbody tr:nth-child(2n + 2) {
+  background-color: #e5e9f0;
+  /* Color for the first row of each pair */
+}
+
+
+thead {
+  border-top: 2px solid black;
+}
+
+thead th {
+  border-bottom: 1px solid black;
+}
+
+tbody tr:last-child td {
+  border-bottom: 2px solid black;
+}
